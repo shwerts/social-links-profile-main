@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/shwerts/social-links-profile-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [GH Pages](https://shwerts.github.io/social-links-profile-main/)
 
 ## My process
 
