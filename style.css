@@ -39,7 +39,7 @@ main {
   color: white;
   border-radius: 1rem;
 }
-address {
+address, .living-address {
   font-style: normal;
   font-weight: 600;
 }
@@ -51,25 +51,33 @@ address {
   border-radius: 50%;
 }
 .profile h1 {
-  margin: 1em 0 .4em;
+  font-size: 1.6em;
+  margin: 1em 0 .6em;
   font-weight: 700;
 }
-header address {color: var(--green);}
+.living-address {color: var(--green);}
 
 /* Profile card. The main content & address */
 
-.profile p {margin: 2em 1em;}
+.profile p:has(span:only-child) {margin: 2em 1em;}
 .profile > address {
   display: flex;
   flex-flow: column wrap;
   gap: 1.2em;
 }
 .profile address a {
+  transition:
+    .5s background-color,
+    .5s color;
   background-color: var(--grey);
   padding: 1rem;
   color: unset;
   text-decoration: none;
   border-radius: .5em;
+}
+.profile address a:is(:hover, :focus) {
+  background-color: var(--green);
+  color: var(--off-black);
 }
 
 @media screen and (max-width: 767px) {
