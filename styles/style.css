@@ -33,17 +33,15 @@ main {
 /* The profile card & local general styles */
 
 .profile {
-  max-width: 28rem;
+  width: 26rem;
   padding: 2.5rem;
   text-align: center;
   background-color: var(--dark-grey);
   color: white;
   border-radius: 1rem;
 }
-address, .living-address {
-  font-style: normal;
-  font-weight: 600;
-}
+
+ul, p {line-height: 140%;}
 
 /* Profile card. The header */
 
@@ -54,15 +52,18 @@ address, .living-address {
 
 .profile h1 {
   font-size: 1.6rem;
-  margin: 1.2em 0 .6em;
+  margin: 1.2em 0 .5em;
   font-weight: 700;
 }
 
-.living-address {color: var(--green);}
+.living-address {
+  color: var(--green);
+  font-weight: 600;
+}
 
 /* Profile card. The main content */
 
-.about-me {margin: 2rem 1rem;}
+.about-me {margin: 1.8rem 1rem;}
 
 .socials {
   display: flex;
