@@ -6,8 +6,12 @@
 /* The general settings */
 @font-face {
   font-family: Inter;
-  src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+  src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
+*,
+*::before,
+*::after {box-sizing: border-box;}
+
 :root {
   font-size: 14px;
   font-family: Inter;
@@ -17,13 +21,10 @@
   --off-black: hsl(0, 0%, 8%);
   background-color: var(--off-black);
 }
-*,
-*::before,
-*::after {box-sizing: border-box;}
-body {margin: 0;}
 
+body {margin: 0;}
 main {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,8 +33,8 @@ main {
 /* The profile card & local general styles */
 
 .profile {
-  width: 26em;
-  padding: 2.5em;
+  max-width: 28rem;
+  padding: 2.5rem;
   text-align: center;
   background-color: var(--dark-grey);
   color: white;
@@ -47,43 +48,53 @@ address, .living-address {
 /* Profile card. The header */
 
 .profile img {
-  max-width: 6em;
+  max-width: 6rem;
   border-radius: 50%;
 }
+
 .profile h1 {
-  font-size: 1.6em;
-  margin: 1em 0 .6em;
+  font-size: 1.6rem;
+  margin: 1.2em 0 .6em;
   font-weight: 700;
 }
+
 .living-address {color: var(--green);}
 
-/* Profile card. The main content & address */
+/* Profile card. The main content */
 
-.profile p:has(span:only-child) {margin: 2em 1em;}
-.profile > address {
+.about-me {margin: 2rem 1rem;}
+
+.socials {
   display: flex;
   flex-flow: column wrap;
-  gap: 1.2em;
+  gap: 1.2rem;
+  list-style: none;
 }
-.profile address a {
+.socials li {
+  background-color: var(--grey);
+  border-radius: .5rem;
+}
+.socials a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
   transition:
     .5s background-color,
     .5s color;
-  background-color: var(--grey);
   padding: 1rem;
-  color: unset;
-  text-decoration: none;
-  border-radius: .5em;
+  border-radius: inherit;
 }
-.profile address a:is(:hover, :focus) {
+.socials a:is(:hover, :focus) {
   background-color: var(--green);
   color: var(--off-black);
 }
 
 @media screen and (max-width: 767px) {
   .profile {
-    width: 90%;
-    max-width: 24em;
-    padding: 1.5em;
+    max-width: 24rem;
+    padding: 1.5rem;
+    margin: 1rem;
   }
 }
